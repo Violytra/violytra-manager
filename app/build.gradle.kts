@@ -30,8 +30,8 @@ android {
         buildConfigField("String", "BUNDLE_PUBLIC_KEY", "\"$patchesPublicKey\"")
         buildConfigField("String", "ORG_LINK", "\"https://github.com/Violytra\"")
         buildConfigField("String", "INVITE_LINK", "\"https://discord.com/invite/dtBTQHYSx4\"")
-        buildConfigField("String", "MODDED_APP_PACKAGE_NAME", "\"app.violytra\"")
-        buildConfigField("int", "MODDED_APP_ICON", "0xFF37EBFF")
+        buildConfigField("String", "MODDED_APP_PACKAGE_NAME", "\"app.violytra.xposed\"")
+        buildConfigField("int", "MODDED_APP_ICON", "0xFF7C4DFF")
         buildConfigField("int", "MODDED_APP_ICON_ALPHA", "0xFFFBB33C")
         buildConfigField("int", "MODDED_APP_ICON_OTHER", "0xFFD3575E")
 
