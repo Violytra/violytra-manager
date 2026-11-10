@@ -36,7 +36,7 @@ fun CommitList(
     LazyColumn {
         itemsIndexed(
             items = commits,
-            key = { _, commit -> commit.sha }
+            key = { index, commit -> "${commit?.sha ?: "null"}_$index" }
         ) { i, commit ->
             Column {
                 Commit(commit = commit)
