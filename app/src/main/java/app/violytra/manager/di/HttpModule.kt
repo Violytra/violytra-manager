@@ -24,8 +24,9 @@ val httpModule = module {
         }
 
         install(HttpTimeout) {
-            socketTimeoutMillis = 15000
-            connectTimeoutMillis = 15000
+            socketTimeoutMillis = 300000
+            connectTimeoutMillis = 30000
+            requestTimeoutMillis = 300000
         }
     }
 
