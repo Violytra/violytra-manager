@@ -71,7 +71,7 @@ enum class UpdateCheckerDuration(@StringRes val labelRes: Int, val time: Long, v
 }
 
 enum class Mirror(val baseUrl: String) {
-    DEFAULT("https://proxy.vd.ushie.dev"),
+    DEFAULT("https://proxy.violytra.cc.cd"),
     VENDETTA("https://tracker.vendetta.rocks"),
 }
 
