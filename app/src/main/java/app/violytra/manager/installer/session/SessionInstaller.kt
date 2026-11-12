@@ -7,15 +7,22 @@ import android.content.Intent
 import android.content.pm.PackageInstaller.SessionParams
 import android.content.pm.PackageManager
 import android.os.Build
+import app.violytra.manager.BuildConfig
+import app.violytra.manager.domain.manager.PreferenceManager
 import app.violytra.manager.installer.Installer
 import java.io.File
 
-internal class SessionInstaller(private val context: Context) : Installer {
+internal class SessionInstaller(
+    private val context: Context,
+    private val prefs: PreferenceManager
+) : Installer {
 
     private val packageManager: PackageManager = context.packageManager
 
     override suspend fun installApks(silent: Boolean, vararg apks: File) {
         val params = SessionParams(SessionParams.MODE_FULL_INSTALL).apply {
+            setAppPackageName(prefs.packageName.ifBlank { BuildConfig.MODDED_APP_PACKAGE_NAME })
+
             if (Build.VERSION.SDK_INT >= 31) {
                 setInstallScenario(PackageManager.INSTALL_SCENARIO_FAST)
 

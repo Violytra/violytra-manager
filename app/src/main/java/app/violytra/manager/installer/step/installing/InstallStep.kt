@@ -53,7 +53,7 @@ class InstallStep(
         }
 
         val installer: Installer = when (installMethod) {
-            InstallMethod.DEFAULT -> SessionInstaller(context)
+            InstallMethod.DEFAULT -> SessionInstaller(context, preferences)
             InstallMethod.SHIZUKU -> ShizukuInstaller(context)
         }
 
