@@ -26,10 +26,9 @@ android {
         versionCode = versionName!!.removePrefix("v").split("-").first().replace(".", "").toInt()
 
         buildConfigField("String", "MOD_NAME", "\"Violytra\"")
-        buildConfigField("String", "REPO", "\"danishtesting4/violytra-mod\"")
+        buildConfigField("String", "REPO", "\"Violytra/violytra-mod\"")
         buildConfigField("String", "BUNDLE_PUBLIC_KEY", "\"$patchesPublicKey\"")
         buildConfigField("String", "ORG_LINK", "\"https://github.com/Violytra\"")
-        buildConfigField("String", "INVITE_LINK", "\"https://discord.com/invite/dtBTQHYSx4\"")
         buildConfigField("String", "MODDED_APP_PACKAGE_NAME", "\"app.violytra.xposed\"")
         buildConfigField("int", "MODDED_APP_ICON", "0xFF7C4DFF")
         buildConfigField("int", "MODDED_APP_ICON_ALPHA", "0xFFFBB33C")

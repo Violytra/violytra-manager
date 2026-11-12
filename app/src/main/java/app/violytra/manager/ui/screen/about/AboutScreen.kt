@@ -132,12 +132,6 @@ class AboutScreen : Screen {
                             label = R.string.label_github,
                             link = BuildConfig.ORG_LINK
                         )
-
-                        LinkItem(
-                            icon = R.drawable.ic_discord,
-                            label = R.string.label_discord,
-                            link = BuildConfig.INVITE_LINK
-                        )
                     }
                 }
 
