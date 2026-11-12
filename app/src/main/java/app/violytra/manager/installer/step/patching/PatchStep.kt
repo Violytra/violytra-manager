@@ -17,10 +17,8 @@ import app.violytra.manager.installer.step.Step
 import app.violytra.manager.installer.step.StepGroup
 import app.violytra.manager.installer.step.StepRunner
 import app.violytra.manager.installer.step.download.DownloadBaseStep
-import app.violytra.manager.installer.step.download.DownloadLangStep
 import app.violytra.manager.installer.step.download.DownloadLibsStep
 import app.violytra.manager.installer.step.download.DownloadModStep
-import app.violytra.manager.installer.step.download.DownloadResourcesStep
 import app.violytra.manager.installer.util.Logger
 import app.violytra.manager.installer.util.Signer
 import kotlinx.coroutines.Dispatchers
@@ -46,8 +44,6 @@ class PatchStep(
     override suspend fun run(runner: StepRunner) {
         val baseApk = runner.getCompletedStep<DownloadBaseStep>().workingCopy
         val libsApk = runner.getCompletedStep<DownloadLibsStep>().workingCopy
-        val langApk = runner.getCompletedStep<DownloadLangStep>().workingCopy
-        val resApk = runner.getCompletedStep<DownloadResourcesStep>().workingCopy
         val module = runner.getCompletedStep<DownloadModStep>().workingCopy
 
         val bundle = bundleManager.load()
@@ -55,7 +51,7 @@ class PatchStep(
 
         val request = PatchRequest(
             apkPath = baseApk.absolutePath,
-            splitPaths = listOf(libsApk, langApk, resApk).map { it.absolutePath },
+            splitPaths = listOf(libsApk).map { it.absolutePath },
             bundlePaths = listOf(bundle.file.absolutePath),
             trust = Trust(keys = listOf(bundle.signer)),
             selection = selection(module),
