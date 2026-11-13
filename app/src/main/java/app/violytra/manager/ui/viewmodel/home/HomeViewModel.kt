@@ -130,7 +130,7 @@ class HomeViewModel(
                 }
 
             val installer: Installer = when (installMethod) {
-                InstallMethod.DEFAULT -> SessionInstaller(context)
+                InstallMethod.DEFAULT -> SessionInstaller(context, prefs)
                 InstallMethod.SHIZUKU -> ShizukuInstaller(context)
             }
 
