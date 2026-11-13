@@ -1,3 +1,11 @@
+## [1.0.6](https://github.com/Violytra/violytra-manager/compare/v1.0.5...v1.0.6) (2026-11-13)
+
+
+### Bug Fixes
+
+* pass prefs to SessionInstaller in HomeViewModel ([05d2344](https://github.com/Violytra/violytra-manager/commit/05d234435c01f660cd8791a0f139e98bade1464b))
+* remove contributors, special thanks, and open source libraries from about screen ([6b39ecb](https://github.com/Violytra/violytra-manager/commit/6b39ecb083ef255e602bfd401ecfde51c2f392cb))
+
 ## [1.0.5](https://github.com/Violytra/violytra-manager/compare/v1.0.4...v1.0.5) (2026-11-11)
 
 ## [1.0.4](https://github.com/danishtesting4/violytra-manager/compare/v1.0.3...v1.0.4) (2026-11-10)
