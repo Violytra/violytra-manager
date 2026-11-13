@@ -1,3 +1,11 @@
+## [1.0.7](https://github.com/Violytra/violytra-manager/compare/v1.0.6...v1.0.7) (2026-11-13)
+
+
+### Bug Fixes
+
+* correct encoding for restored download step files ([0e26c96](https://github.com/Violytra/violytra-manager/commit/0e26c96e5fce3bf7d11717d46516baf33c9d9dbf))
+* restore language and resources splits to prevent missing split install failure ([8cc04d1](https://github.com/Violytra/violytra-manager/commit/8cc04d1f8bc122c277e00104fbe4c9b232fdbe09))
+
 ## [1.0.6](https://github.com/Violytra/violytra-manager/compare/v1.0.5...v1.0.6) (2026-11-13)
 
 
