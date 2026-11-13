@@ -9,7 +9,9 @@ import app.violytra.manager.BuildConfig
 import app.violytra.manager.domain.manager.PathManager
 import app.violytra.manager.domain.manager.PreferenceManager
 import app.violytra.manager.installer.step.download.DownloadBaseStep
+import app.violytra.manager.installer.step.download.DownloadLangStep
 import app.violytra.manager.installer.step.download.DownloadLibsStep
+import app.violytra.manager.installer.step.download.DownloadResourcesStep
 import app.violytra.manager.installer.step.download.DownloadModStep
 import app.violytra.manager.installer.step.installing.InstallStep
 import app.violytra.manager.installer.step.patching.PatchStep
@@ -88,6 +90,8 @@ class StepRunner(
         // Downloading
         add(DownloadBaseStep(discordDir, patchedDir, discordVersion.toVersionCode()))
         add(DownloadLibsStep(discordDir, patchedDir, discordVersion.toVersionCode()))
+        add(DownloadLangStep(discordDir, patchedDir, discordVersion.toVersionCode()))
+        add(DownloadResourcesStep(discordDir, patchedDir, discordVersion.toVersionCode()))
         add(DownloadModStep(patchedDir))
 
         // Patching

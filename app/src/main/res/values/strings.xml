@@ -30,7 +30,8 @@
 
     <string name="step_dl_base">Downloading base apk</string>
     <string name="step_dl_lib">Downloading libraries apk</string>
-
+    <string name="step_dl_lang">Downloading language apk</string>
+    <string name="step_dl_res">Downloading resources apk</string>
     <string name="step_dl_mod">Downloading Violytra</string>
 
     <string name="step_patch">Patching Discord</string>
