@@ -1,6 +1,7 @@
 package app.violytra.manager.installer.step.installing
 
 import android.content.Context
+import app.violytra.manager.BuildConfig
 import app.violytra.manager.R
 import app.violytra.manager.domain.manager.InstallMethod
 import app.violytra.manager.domain.manager.PreferenceManager
@@ -53,7 +54,10 @@ class InstallStep(
         }
 
         val installer: Installer = when (installMethod) {
-            InstallMethod.DEFAULT -> SessionInstaller(context, preferences)
+            InstallMethod.DEFAULT -> SessionInstaller(
+                context,
+                preferences.packageName.ifBlank { BuildConfig.MODDED_APP_PACKAGE_NAME }
+            )
             InstallMethod.SHIZUKU -> ShizukuInstaller(context)
         }
 
