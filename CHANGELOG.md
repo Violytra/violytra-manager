@@ -1,3 +1,10 @@
+## [1.0.8](https://github.com/Violytra/violytra-manager/compare/v1.0.7...v1.0.8) (2026-11-15)
+
+
+### Bug Fixes
+
+* target manager package during self-update install ([ee4bae8](https://github.com/Violytra/violytra-manager/commit/ee4bae83d2929e22de5bed2d175d04f93265fda2))
+
 ## [1.0.7](https://github.com/Violytra/violytra-manager/compare/v1.0.6...v1.0.7) (2026-11-13)
 
 
