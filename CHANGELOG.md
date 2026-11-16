@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/Violytra/violytra-manager/compare/v1.0.8...v1.1.0) (2026-11-16)
+
+
+### Features
+
+* show update when new Violytra patch release is available ([a8bdd58](https://github.com/Violytra/violytra-manager/commit/a8bdd5812b57eb5ed0bd0603500bd6d0dc0469d8))
+
 ## [1.0.8](https://github.com/Violytra/violytra-manager/compare/v1.0.7...v1.0.8) (2026-11-15)
 
 
