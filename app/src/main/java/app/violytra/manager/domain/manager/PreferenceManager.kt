@@ -16,6 +16,8 @@ class PreferenceManager(context: Context, paths: PathManager) :
 
     var moduleVersion by stringPreference("module_version", "")
 
+    var installedModuleVersion by stringPreference("installed_module_version", "")
+
     var patchIcon by booleanPreference("patch_icon", true)
 
     var debuggable by booleanPreference("debuggable", false)

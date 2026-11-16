@@ -155,17 +155,22 @@ class HomeScreen : Screen {
                     }
                 }
 
+                val patchUpdateAvailable = currentVersion != null &&
+                    prefs.moduleVersion.isNotBlank() &&
+                    prefs.installedModuleVersion != prefs.moduleVersion
+
                 Button(
                     onClick = {
                         navigator.navigate(InstallerScreen(targetVersion!!))
                     },
-                    enabled = targetVersion != null && (prefs.allowDowngrade || targetVersion >= (currentVersion ?: Constants.DUMMY_VERSION)),
+                    enabled = targetVersion != null && (patchUpdateAvailable || prefs.allowDowngrade || targetVersion >= (currentVersion ?: Constants.DUMMY_VERSION)),
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     val label = when {
                         targetVersion == null && viewModel.bundleManager.problem != null -> R.string.msg_patches_unavailable
                         targetVersion == null -> R.string.msg_loading
                         currentVersion == null -> R.string.action_install
+                        currentVersion == targetVersion && patchUpdateAvailable -> R.string.action_update
                         currentVersion == targetVersion -> R.string.action_reinstall
                         targetVersion > currentVersion -> R.string.action_update
                         else -> if (prefs.allowDowngrade) R.string.msg_downgrade else R.string.msg_downgrade_disallowed
