@@ -13,9 +13,11 @@ import cafe.adriel.voyager.core.model.screenModelScope
 import app.violytra.manager.R
 import app.violytra.manager.domain.manager.InstallManager
 import app.violytra.manager.domain.manager.PathManager
+import app.violytra.manager.domain.manager.PreferenceManager
 import app.violytra.manager.installer.step.Step
 import app.violytra.manager.installer.step.StepGroup
 import app.violytra.manager.installer.step.StepRunner
+import app.violytra.manager.installer.step.StepStatus
 import app.violytra.manager.utils.DiscordVersion
 import app.violytra.manager.utils.showToast
 import kotlinx.collections.immutable.ImmutableMap
@@ -31,6 +33,7 @@ class InstallerViewModel(
     private val context: Context,
     private val installManager: InstallManager,
     private val paths: PathManager,
+    private val prefs: PreferenceManager,
     discordVersion: DiscordVersion
 ) : ScreenModel {
 
@@ -59,6 +62,10 @@ class InstallerViewModel(
 
         withContext(Dispatchers.IO) {
             runner.runAll()
+        }
+
+        if (runner.currentStep?.status == StepStatus.SUCCESSFUL && prefs.moduleVersion.isNotBlank()) {
+            prefs.installedModuleVersion = prefs.moduleVersion
         }
     }
 
