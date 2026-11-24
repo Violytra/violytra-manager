@@ -130,6 +130,16 @@ class AboutScreen : Screen {
                             label = R.string.label_github,
                             link = BuildConfig.ORG_LINK
                         )
+                        LinkItem(
+                            icon = R.drawable.ic_discord,
+                            label = R.string.label_discord,
+                            link = "https://discord.gg/zhtzbpg6M"
+                        )
+                        LinkItem(
+                            icon = R.drawable.ic_website,
+                            label = R.string.label_website,
+                            link = "https://violytra.cc.cd"
+                        )
                     }
                 }
 

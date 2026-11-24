@@ -153,6 +153,8 @@
 
     <string name="label_github">GitHub</string>
     <string name="label_discord">Discord</string>
+    <string name="label_website">Website</string>
+    <string name="label_discord">Discord</string>
     <string name="label_team">Team</string>
     <string name="label_special_thanks">Special thanks</string>
     <string name="label_translate">Translate</string>
