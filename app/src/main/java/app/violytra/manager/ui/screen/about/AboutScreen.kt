@@ -95,6 +95,12 @@ class AboutScreen : Screen {
                     )
 
                     Text(
+                        text = "Discord, tuned with everything",
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = LocalContentColor.current.copy(alpha = 0.7f),
+                    )
+
+                    Text(
                         text = "v${BuildConfig.VERSION_NAME} (${BuildConfig.VERSION_CODE})",
                         style = MaterialTheme.typography.labelLarge,
                         color = LocalContentColor.current.copy(alpha = 0.5f),
